@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prakriti Assessment</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9f5ec; color: #333; margin: 20px; }
+    h1 { color: #4a772f; text-align: center; }
+    .question { margin-bottom: 20px; padding: 10px; border-bottom: 1px solid #ccc; }
+    label { display: block; margin: 5px 0; }
+    button { padding: 12px 18px; background: #4a772f; color: #fff; border: none; border-radius: 6px; cursor: pointer; }
+    button:hover { background: #365d23; }
+    .result { margin-top: 30px; padding: 20px; background: #e6f4e6; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <h1>Prakriti Assessment</h1>
+  <form id="quizForm">
+
+    <div class="question">
+      <p>1. What is your body frame?</p>
+      <label><input type="radio" name="q1" value="vata"> Thin (Vata)</label>
+      <label><input type="radio" name="q1" value="pitta"> Medium (Pitta)</label>
+      <label><input type="radio" name="q1" value="kapha"> Heavy or good built (Kapha)</label>
+    </div>
+
+    <div class="question">
+      <p>2. Type of Hair</p>
+      <label><input type="radio" name="q2" value="vata"> Dry, Split Ends (Vata)</label>
+      <label><input type="radio" name="q2" value="pitta"> Normal, Thin, More Hair Fall (Pitta)</label>
+      <label><input type="radio" name="q2" value="kapha"> Greasy, Heavy (Kapha)</label>
+    </div>
+
+    <div class="question">
+      <p>3. Color of Hair</p>
+      <label><input type="radio" name="q3" value="vata"> Pale Brown (Vata)</label>
+      <label><input type="radio" name="q3" value="pitta"> Red or Brown (Pitta)</label>
+      <label><input type="radio" name="q3" value="kapha"> Jet Black (Kapha)</label>
+    </div>
+
+    <div class="question">
+      <p>4. Skin</p>
+      <label><input type="radio" name="q4" value="vata"> Dry, Rough (Vata)</label>
+      <label><input type="radio" name="q4" value="pitta"> Soft, Sweating, Acne (Pitta)</label>
+      <label><input type="radio" name="q4" value="kapha"> Moist, Greasy (Kapha)</label>
+    </div>
+
+    <div class="question">
+      <p>5. Complexion</p>
+      <label><input type="radio" name="q5" value="vata"> Dark, Blackish (Vata)</label>
+      <label><input type="radio" name="q5" value="pitta"> Pink to Red (Pitta)</label>
+      <label><input type="radio" name="q5" value="kapha"> Glowing, White (Kapha)</label>
+    </div>
+
+    <div class="question">
+      <p>6. Body Weight</p>
+      <label><input type="radio" name="q6" value="vata"> Low, Difficult to Put on weight (Vata)</label>
+      <label><input type="radio" name="q6" value="pitta"> Medium, Can Easily Lose or Gain Weight (Pitta)</label>
+      <label><input type="radio" name="q6" value="kapha"> Overweight, Difficult to Lose Weight (Kapha)</label>
+    </div>
+
+    <div class="question">
+      <p>7. Nails</p>
+      <label><input type="radio" name="q7" value="vata"> Blackish, Small, Brittle (Vata)</label>
+      <label><input type="radio" name="q7" value="pitta"> Reddish, Small (Pitta)</label>
+      <label><input type="radio" name="q7" value="kapha"> Pinkish, Big, Smooth (Kapha)</label>
+    </div>
+
+    <div class="question">
+      <p>8. Size and Color of the Teeth</p>
+      <label><input type="radio" name="q8" value="vata"> Very Big or Very Small, Irregular, Blackish (Vata)</label>
+      <label><input type="radio" name="q8" value="pitta"> Medium Sized, Yellowish (Pitta)</label>
+      <label><input type="radio" name="q8" value="kapha"> Large, Shining White (Kapha)</label>
+    </div>
+
+    <div class="question">
+      <p>9. Pace of Performing Work</p>
+      <label><input type="radio" name="q9" value="vata"> Fast, Always in Hurry (Vata)</label>
+      <label><input type="radio" name="q9" value="pitta"> Medium, Energetic (Pitta)</label>
+      <label><input type="radio" name="q9" value="kapha"> Slow, Steady (Kapha)</label>
+    </div>
+
+    <div class="question">
+      <p>10. Mental Activity</p>
+      <label><input type="radio" name="q10" value="vata"> Quick, Restless (Vata)</label>
+      <label><input type="radio" name="q10" value="pitta"> Smart Intellect, Aggressive (Pitta)</label>
+      <label><input type="radio" name="q10" value="kapha"> Calm, Stable (Kapha)</label>
+    </div>
+
+    <!-- Q11-Q30 follow same pattern -->
+    <!-- To save space, I’ll include the remaining questions below -->
+
+    <div class="question">
+      <p>11. Memory</p>
+      <label><input type="radio" name="q11" value="vata"> Short Term Bad (Vata)</label>
+      <label><input type="radio" name="q11" value="pitta"> Good Memory (Pitta)</label>
+      <label><input type="radio" name="q11" value="kapha"> Long Term is Best (Kapha)</label>
+    </div>
+
+    <div class="question">
+      <p>12. Grasping Power</p>
+      <label><input type="radio" name="q12" value="vata"> Grasps Quickly but not Completely (Vata)</label>
+      <label><input type="radio" name="q12" value="pitta"> Grasps Quickly and Retains (Pitta)</label>
+      <label><input type="radio" name="q12" value="kapha"> Grasps Late, Retains Longer (Kapha)</label>
+    </div>
+
+    <div class="question">
+      <p>13. Sleep Pattern</p>
+      <label><input type="radio" name="q13" value="vata"> Interrupted, Less (Vata)</label>
+      <label><input type="radio" name="q13" value="pitta"> Moderate (Pitta)</label>
+      <label><input type="radio" name="q13" value="kapha"> Sleepy, Lazy (Kapha)</label>
+    </div>
+
+    <div class="question">
+      <p>14. Intolerance to Weather</p>
+      <label><input type="radio" name="q14" value="vata"> Aversion to Cold (Vata)</label>
+      <label><input type="radio" name="q14" value="pitta"> Aversion to Heat (Pitta)</label>
+      <label><input type="radio" name="q14" value="kapha"> Aversion to Moist/Rainy/Cool (Kapha)</label>
+    </div>
+
+    <div class="question">
+      <p>15. Reactions Under Adverse Situations</p>
+      <label><input type="radio" name="q15" value="vata"> Anxiety, Worry, Irritable (Vata)</label>
+      <label><input type="radio" name="q15" value="pitta"> Anger, Aggression (Pitta)</label>
+      <label><input type="radio" name="q15" value="kapha"> Calm, Reclusive, Sometimes Depressive (Kapha)</label>
+    </div>
+
+    <div class="question">
+      <p>16. Mood</p>
+      <label><input type="radio" name="q16" value="vata"> Frequent Mood Swings (Vata)</label>
+      <label><input type="radio" name="q16" value="pitta"> Changes Slowly (Pitta)</label>
+      <label><input type="radio" name="q16" value="kapha"> Stable, Constant (Kapha)</label>
+    </div>
+
+    <div class="question">
+      <p>17. Eating Habit</p>
+      <label><input type="radio" name="q17" value="vata"> Eats Quickly, Improperly (Vata)</label>
+      <label><input type="radio" name="q17" value="pitta"> Eats Moderate (Pitta)</label>
+      <label><input type="radio" name="q17" value="kapha"> Chews Properly (Kapha)</label>
+    </div>
+
+    <div class="question">
+      <p>18. Hunger</p>
+      <label><input type="radio" name="q18" value="vata"> Irregular, Any Time (Vata)</label>
+      <label><input type="radio" name="q18" value="pitta"> Sudden Hunger Pangs (Pitta)</label>
+      <label><input type="radio" name="q18" value="kapha"> Can Skip Meal Easily (Kapha)</label>
+    </div>
+
+    <div class="question">
+      <p>19. Body Temperature</p>
+      <label><input type="radio" name="q19" value="vata"> Less than Normal, Hands/Feet Cold (Vata)</label>
+      <label><input type="radio" name="q19" value="pitta"> More than Normal, Face Hot (Pitta)</label>
+      <label><input type="radio" name="q19" value="kapha"> Normal, Slightly Cold Hands/Feet (Kapha)</label>
+    </div>
+
+    <div class="question">
+      <p>20. Joints</p>
+      <label><input type="radio" name="q20" value="vata"> Weak, Noisy Movement (Vata)</label>
+      <label><input type="radio" name="q20" value="pitta"> Healthy, Optimal Strength (Pitta)</label>
+      <label><input type="radio" name="q20" value="kapha"> Heavy Weight Bearing (Kapha)</label>
+    </div>
+
+    <div class="question">
+      <p>21. Nature</p>
+      <label><input type="radio" name="q21" value="vata"> Timid, Jealous (Vata)</label>
+      <label><input type="radio" name="q21" value="pitta"> Egoistic, Fearless (Pitta)</label>
+      <label><input type="radio" name="q21" value="kapha"> Forgiving, Grateful, Not Greedy (Kapha)</label>
+    </div>
+
+    <div class="question">
+      <p>22. Body Energy</p>
+      <label><input type="radio" name="q22" value="vata"> Low in Evening, Fatigues Quickly (Vata)</label>
+      <label><input type="radio" name="q22" value="pitta"> Moderate, Medium Work (Pitta)</label>
+      <label><input type="radio" name="q22" value="kapha"> Excellent, Hardly Fatigued (Kapha)</label>
+    </div>
+
+    <div class="question">
+      <p>23. Eyeball</p>
+      <label><input type="radio" name="q23" value="vata"> Unsteady, Fast Moving (Vata)</label>
+      <label><input type="radio" name="q23" value="pitta"> Moving Slowly (Pitta)</label>
+      <label><input type="radio" name="q23" value="kapha"> Steady (Kapha)</label>
+    </div>
+
+    <div class="question">
+      <p>24. Quality of Voice</p>
+      <label><input type="radio" name="q24" value="vata"> Rough, Broken Words (Vata)</label>
+      <label><input type="radio" name="q24" value="pitta"> Fast, Commanding (Pitta)</label>
+      <label><input type="radio" name="q24" value="kapha"> Soft, Deep (Kapha)</label>
+    </div>
+
+    <div class="question">
+      <p>25. Dreams</p>
+      <label><input type="radio" name="q25" value="vata"> Sky, Wind, Flying, Confusion (Vata)</label>
+      <label><input type="radio" name="q25" value="pitta"> Fire, Light, Bright, Violence (Pitta)</label>
+      <label><input type="radio" name="q25" value="kapha"> Water, Gardens, Good Relationships (Kapha)</label>
+    </div>
+
+    <div class="question">
+      <p>26. Social Relations</p>
+      <label><input type="radio" name="q26" value="vata"> Few Friends, Solitary (Vata)</label>
+      <label><input type="radio" name="q26" value="pitta"> Moderate No. of Friends (Pitta)</label>
+      <label><input type="radio" name="q26" value="kapha"> Social, Long-lasting Relations (Kapha)</label>
+    </div>
+
+    <div class="question">
+      <p>27. Wealth</p>
+      <label><input type="radio" name="q27" value="vata"> Spends Without Thinking (Vata)</label>
+      <label><input type="radio" name="q27" value="pitta"> Saves, Spends on Valuable (Pitta)</label>
+      <label><input type="radio" name="q27" value="kapha"> Prefers More Savings (Kapha)</label>
+    </div>
+
+    <div class="question">
+      <p>28. Bowel Movements</p>
+      <label><input type="radio" name="q28" value="vata"> Dry, Hard, Scanty (Vata)</label>
+      <label><input type="radio" name="q28" value="pitta"> Soft, Yellowish, Loose (Pitta)</label>
+      <label><input type="radio" name="q28" value="kapha"> Heavy, Thick, Sticky (Kapha)</label>
+    </div>
+
+    <div class="question">
+      <p>29. Walking Pace</p>
+      <label><input type="radio" name="q29" value="vata"> Quick, Long Steps (Vata)</label>
+      <label><input type="radio" name="q29" value="pitta"> Average, Steady (Pitta)</label>
+      <label><input type="radio" name="q29" value="kapha"> Slow, Short Steps (Kapha)</label>
+    </div>
+
+    <div class="question">
+      <p>30. Communication Skills</p>
+      <label><input type="radio" name="q30" value="vata"> Fast, Irrelevant, Not Clear (Vata)</label>
+      <label><input type="radio" name="q30" value="pitta"> Good Speaker, Argumentative (Pitta)</label>
+      <label><input type="radio" name="q30" value="kapha"> Authoritative, Firm, Less Speech (Kapha)</label>
+    </div>
+
+    <button type="button" onclick="calculateResult()">Submit</button>
+  </form>
+
+  <div id="result" class="result" style="display:none;"></div>
+
+  <script>
+    function calculateResult() {
+      let form = document.forms['quizForm'];
+      let scores = { vata: 0, pitta: 0, kapha: 0 };
+
+      for (let i = 1; i <= 30; i++) {
+        let ans = form["q" + i]?.value;
+        if (ans) scores[ans]++;
+      }
+
+      let total = scores.vata + scores.pitta + scores.kapha;
+      let vataPercent = ((scores.vata / total) * 100).toFixed(1);
+      let pittaPercent = ((scores.pitta / total) * 100).toFixed(1);
+      let kaphaPercent = ((scores.kapha / total) * 100).toFixed(1);
+
+      let dominant = Object.keys(scores).reduce((a,b) => scores[a] > scores[b] ? a : b);
+
+      let description = {
+        vata: "Predominantly Vata: Creative, energetic, prone to anxiety and irregular habits.",
+        pitta: "Predominantly Pitta: Sharp-minded, ambitious, with strong digestion and leadership qualities.",
+        kapha: "Predominantly Kapha: Calm, stable, compassionate, with good stamina but may gain weight easily."
+      };
+
+      document.getElementById("result").style.display = "block";
+      document.getElementById("result").innerHTML =
